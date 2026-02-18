@@ -1,0 +1,311 @@
+/* src/App.css - same clean style as your HTML + product images + upload */
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#1e293b;
+  --muted:#5e6f8d;
+  --border:#eef2f6;
+  --accent:#0066ff;
+  --good:#166534;
+  --goodBg:#dcfce7;
+  --bad:#b91c1c;
+  --badBg:#fee2e2;
+  --warn:#9a3412;
+  --warnBg:#ffedd5;
+  --shadow: 0 8px 26px rgba(0,0,0,.04), 0 3px 8px rgba(0,0,0,.03);
+  --radius: 28px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.app{
+  padding: 14px;
+  display:flex;
+  justify-content:center;
+}
+.frame{
+  width:100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.topRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+.logo{
+  background: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight: 800;
+  box-shadow: 0 5px 12px rgba(0,102,255,0.2);
+}
+.title h2{margin:0;font-size: 19px;font-weight: 700;color:#0f172a}
+.title p{margin:2px 0 0;font-size: 12px;color: var(--muted)}
+
+.headerBadges{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+.pill{
+  background: #eaf3ff;
+  border: 1px solid #cddfff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #24456f;
+}
+
+.tabs{
+  display:flex;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 40px;
+  gap: 6px;
+  margin: 16px 0 10px;
+}
+.tab{
+  flex:1;
+  border:none;
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 30px;
+  font-weight: 700;
+  color: #4b5a72;
+  cursor:pointer;
+}
+.tab.active{
+  background:#fff;
+  color:#0b1e3c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1rem;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+
+.sectionTitle{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.sectionTitle h3{margin:0;font-size: 13.5px;}
+
+.badge{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  color: #334155;
+  white-space: nowrap;
+}
+.badge.good{background: var(--goodBg); border-color: #bbf7d0; color: var(--good);}
+.badge.bad{background: var(--badBg); border-color: #fecaca; color: var(--bad);}
+.badge.warn{background: var(--warnBg); border-color: #fed7aa; color: var(--warn);}
+
+.statsRow{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0 14px;
+}
+.stat{
+  background: #f9faff;
+  flex: 1 1 100px;
+  border-radius: 24px;
+  padding: 0.8rem 0.2rem;
+  text-align: center;
+  border: 1px solid #e7edf4;
+}
+.num{font-size: 28px;font-weight: 900; line-height: 1.1;}
+.lbl{font-size: 12px;color:#5f6f8a;margin-top: 6px;}
+
+.dividerLight{
+  height: 2px;
+  background: #e9eef3;
+  margin: 14px 0;
+}
+
+.lineRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 4px 6px;
+  gap: 10px;
+}
+.muted{color:#50607c}
+.small{font-size: 12px}
+
+.netBox{
+  background: #f0fdf4;
+  border-radius: 24px;
+  padding: 0.9rem 1.2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 12px 0;
+  border: 1px solid #d1fae5;
+}
+.moneyLabel{font-weight:700;color:#0a3622}
+.moneyValue{font-size: 22px;font-weight: 900;color:#0b4b2e}
+.moneyValue.loss{color: var(--bad)}
+
+.twoCols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 520px){ .twoCols{grid-template-columns: 1fr;} }
+
+.kbox{
+  background:#f9faff;
+  border: 1px solid #e7edf4;
+  border-radius: 24px;
+  padding: 12px 12px;
+}
+.kbox b{display:block;font-size: 18px}
+.kbox .muted{font-size: 12px;margin-top: 6px}
+
+.miniCard{
+  background: #f9f9fc;
+  border-radius: 22px;
+  padding: 12px 12px;
+  border:1px solid #dee6f0;
+}
+.miniRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 10px;
+}
+
+.list{display:grid;gap: 10px}
+.item{
+  background: #ffffff;
+  border: 1px solid #eef2f8;
+  border-radius: 22px;
+  padding: 0.8rem 1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+  gap: 12px;
+}
+.left{display:flex;flex-direction:column;gap:4px;flex:1}
+.right{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+.subNote{
+  font-size: 12px;
+  color: #7b8aa3;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.hint{
+  font-size: 11.5px;
+  color:#8495b2;
+  margin-top: 12px;
+}
+
+/* Product rows */
+.productRow{
+  background:#ffffff;
+  border: 1px solid #eef2f8;
+  border-radius: 22px;
+  padding: 0.8rem 1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+  gap: 12px;
+}
+.productLeft{display:flex;align-items:center;gap: 10px;flex:1}
+.productMeta{display:flex;flex-direction:column;gap: 4px}
+
+.img{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid #e7edf4;
+  background:#f8fafc;
+}
+.imgFallback{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f1f5f9;
+  border: 1px solid #e7edf4;
+}
+.productRight{display:flex;align-items:center;gap: 8px}
+
+/* Upload button */
+.uploadBtn{
+  position: relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  background: #f1f5f9;
+  border: 1px solid #dbe1ea;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  color: #1e2c47;
+  cursor:pointer;
+  font-size: 13px;
+  user-select:none;
+}
+.uploadBtn input{
+  display:none;
+}
+
+/* Toast */
+.toastSimple{
+  background: #1e293b;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-align:center;
+  width: fit-content;
+  margin: 8px auto 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+.toastSimple.show{opacity: 1;}
