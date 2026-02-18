@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate, us
 /** =========================
  * CONFIG
  * ========================= */
-const API_BASE_URL = "http://127.0.0.1:8000/api"; // <-- بدّلها إذا لازم
+const API_BASE_URL = "https://app2backend-master-h5vfqb.laravel.cloud/api"; // <-- بدّلها إذا لازم
 
 /** =========================
  * HELPERS
